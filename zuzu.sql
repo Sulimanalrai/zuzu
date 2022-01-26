@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2022 at 02:13 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Gegenereerd op: 26 jan 2022 om 11:35
+-- Serverversie: 10.4.22-MariaDB
+-- PHP-versie: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `zuzu_db`
+-- Database: `zuzu`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Tabelstructuur voor tabel `customer`
 --
 
 CREATE TABLE `customer` (
@@ -37,16 +37,16 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `customer`
+-- Gegevens worden geëxporteerd voor tabel `customer`
 --
 
 INSERT INTO `customer` (`id`, `fname`, `lname`, `address`, `zipcode`, `city`) VALUES
-(14, 'Jan', 'Van de Jan', 'Hoefkade 122', '2528AC', 'Den Haag');
+(0, 'k', 'ss', 'koning straat', '2364WE', 'den haag');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sushi`
+-- Tabelstructuur voor tabel `sushi`
 --
 
 CREATE TABLE `sushi` (
@@ -57,47 +57,31 @@ CREATE TABLE `sushi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `sushi`
+-- Gegevens worden geëxporteerd voor tabel `sushi`
 --
 
 INSERT INTO `sushi` (`id`, `name`, `price`, `amount`) VALUES
 (1, 'Nigiri', '7', 50),
 (2, 'Sashimi', '8', 50),
-(5, 'Maki', '7', 50),
-(6, 'Uramaki', '8', 50),
-(7, 'Temaki', '7', 50);
+(3, 'Maki', '7', 50),
+(4, 'Uramaki', '8', 50),
+(5, 'Temaki', '7', 50);
 
 --
--- Indexes for dumped tables
+-- Indexen voor geëxporteerde tabellen
 --
 
 --
--- Indexes for table `customer`
+-- Indexen voor tabel `customer`
 --
 ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sushi`
+-- Indexen voor tabel `sushi`
 --
 ALTER TABLE `sushi`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `customer`
---
-ALTER TABLE `customer`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `sushi`
---
-ALTER TABLE `sushi`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
